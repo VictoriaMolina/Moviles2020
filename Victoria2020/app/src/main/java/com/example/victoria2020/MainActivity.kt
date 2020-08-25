@@ -33,5 +33,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btn_IMC.setOnClickListener {
+            val intent = Intent(this, IMC::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }

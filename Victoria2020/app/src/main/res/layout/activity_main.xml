@@ -65,4 +65,14 @@
         android:text="Strings and Ints"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnNewActivity" />
+
+    <Button
+        android:id="@+id/btn_IMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="IMC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStringAndInt" />
 </androidx.constraintlayout.widget.ConstraintLayout>

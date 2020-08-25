@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Fill_all_the_fields">Porfavor ingrese todos los datos</string>
+    <string name="weight">Peso</string>
+    <string name="height">Estatura</string>
+    <string name="Calculate">Calcular</string>
+</resources>
