@@ -39,5 +39,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnFighter.setOnClickListener {
+            val intent = Intent(this, TimeFighter::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }
