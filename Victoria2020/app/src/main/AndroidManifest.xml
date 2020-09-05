@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TimeFighter"></activity>
+        <activity android:name=".evenNumber"></activity>
+        <activity android:name=".ShakeActivity" />
+        <activity android:name=".TimeFighter" />
         <activity android:name=".IMC" />
         <activity android:name=".StringAndIntActivity" />
         <activity android:name=".SecondActivity" />

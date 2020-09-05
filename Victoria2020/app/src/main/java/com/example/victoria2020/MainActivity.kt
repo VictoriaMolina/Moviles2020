@@ -45,5 +45,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnShake.setOnClickListener {
+            val intent = Intent(this, ShakeActivity::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
+        btnPar.setOnClickListener {
+            val intent = Intent(this, evenNumber::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }
