@@ -57,5 +57,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnLottie.setOnClickListener {
+            val intent = Intent(this, LottieAnim::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
+        btnDialogs.setOnClickListener {
+            val intent = Intent(this, Dialogs::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }

@@ -4,4 +4,7 @@
     <string name="weight">Peso</string>
     <string name="height">Estatura</string>
     <string name="Calculate">Calcular</string>
+    <string name="time_left">Tiempo restante: %s</string>
+    <string name="score">Tu puntaje: %s</string>
+    <string name="end_game">Fin del juego %s</string>
 </resources>

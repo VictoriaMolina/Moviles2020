@@ -8,4 +8,7 @@
     <string name="timeLeft">Time Left: %1$d</string>
     <string name="tapMe">Tap Me!</string>
     <string name="Shake">Shake!</string>
+    <string name="time_left">Time left %s</string>
+    <string name="score">Your score: %s</string>
+    <string name="end_game">Game Over %s</string>
 </resources>
