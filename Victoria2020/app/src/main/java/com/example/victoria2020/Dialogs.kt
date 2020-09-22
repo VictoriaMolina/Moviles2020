@@ -5,8 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_dialogs.*
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.dialog_image.view.*
 import kotlinx.android.synthetic.main.dialog_login.view.*
+import kotlin.system.exitProcess
 
 class Dialogs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,5 +32,17 @@ class Dialogs : AppCompatActivity() {
                 mBuilder.dismiss()
             }
         }
+
+        btnImage.setOnClickListener {
+            val DialogView = layoutInflater.inflate(R.layout.dialog_image, null)
+            val mBuilder = AlertDialog.Builder(this)
+                .setView(DialogView).setTitle("Login dialog").show()
+
+            DialogView.btnClose.setOnClickListener {
+                moveTaskToBack(true);
+                exitProcess(-1)
+            }
+        }
+
     }
 }
