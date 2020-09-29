@@ -69,5 +69,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnWeb.setOnClickListener {
+            val intent = Intent(this, WebView::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }
