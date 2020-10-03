@@ -11,4 +11,5 @@
     <string name="time_left">Time left %s</string>
     <string name="score">Your score: %s</string>
     <string name="end_game">Game Over %s</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
