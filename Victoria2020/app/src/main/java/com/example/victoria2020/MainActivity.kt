@@ -81,5 +81,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnQR.setOnClickListener {
+            val intent = Intent(this, QReader::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }
