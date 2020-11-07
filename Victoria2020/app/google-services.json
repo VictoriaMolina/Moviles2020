@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "347921729011",
+    "firebase_url": "https://drink-it-5690d.firebaseio.com",
+    "project_id": "drink-it-5690d",
+    "storage_bucket": "drink-it-5690d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347921729011:android:abc81e1ed1c700e7603e86",
+        "android_client_info": {
+          "package_name": "com.example.victoria2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347921729011-rvj9ukabfdpqp7vahbn5usmkk3nhj0u8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjo0Sls3KVySc2G_2m-HNF6aEVHW4LKJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347921729011-rvj9ukabfdpqp7vahbn5usmkk3nhj0u8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
