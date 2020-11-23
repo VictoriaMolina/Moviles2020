@@ -116,5 +116,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
         })
 
+        btnFire.setOnClickListener {
+            val intent = Intent(this, FireBaseLogin::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }

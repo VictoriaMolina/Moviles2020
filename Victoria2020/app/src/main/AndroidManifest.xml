@@ -17,7 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailPutExtraActivity"></activity>
+        <activity android:name=".FireBaseHome"></activity>
+        <activity android:name=".FireBaseLogin" />
+        <activity android:name=".DetailPutExtraActivity" />
         <activity android:name=".ProductoActivity" />
         <activity android:name=".ListViewProductActivity" />
         <activity android:name=".QReader" />
