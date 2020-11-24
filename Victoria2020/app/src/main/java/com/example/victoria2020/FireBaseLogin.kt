@@ -13,7 +13,9 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import kotlinx.android.synthetic.main.activity_fire_base_home.*
 import kotlinx.android.synthetic.main.activity_fire_base_login.*
+import kotlinx.android.synthetic.main.activity_lottie_anim.*
 
 class FireBaseLogin : AppCompatActivity() {
     private val GOOGLE_SIGN_IN = 100
@@ -25,13 +27,16 @@ class FireBaseLogin : AppCompatActivity() {
     }
 
     private fun setup() {
-        title = "AUtenticación"
+        title = "Autenticación"
 
         btnRegistrar.setOnClickListener{
             if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
                 FirebaseAuth.getInstance().createUserWithEmailAndPassword(email.text.toString(), password.text.toString()).addOnCompleteListener {
                     if (it.isSuccessful) {
                         showHome(it.result?.user?.email ?: "", ProviderType.BASIC)
+                        welAnim.setAnimation("welcome.json")
+                        welAnim.loop(true)
+                        welAnim.playAnimation()
                     } else {
                         showAlert()
                     }
@@ -52,7 +57,7 @@ class FireBaseLogin : AppCompatActivity() {
             }
         }
 
-        btnGoogle.setOnClickListener{
+        /*btnGoogle.setOnClickListener{
             // Configure Google Sign In
             Log.d("Botón", "Si entró al botón")
             Toast.makeText(this, "Mi alerta", Toast.LENGTH_LONG).show()
@@ -65,14 +70,14 @@ class FireBaseLogin : AppCompatActivity() {
             googleClient.signOut()
 
             startActivityForResult(googleClient.signInIntent, GOOGLE_SIGN_IN)
-        }
+        }*/
 
     }
 
     private fun showAlert() {
         val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
-        builder.setMessage("Se ha producido un error autenticando al usuario")
+        builder.setMessage("Se han introducido los datos incorrectos.")
         builder.setPositiveButton("Aceptar", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
@@ -85,7 +90,7 @@ class FireBaseLogin : AppCompatActivity() {
         }
         startActivity(homeIntent)
     }
-
+/*
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -115,6 +120,6 @@ class FireBaseLogin : AppCompatActivity() {
 
         }
     }
-
+*/
 
 }
