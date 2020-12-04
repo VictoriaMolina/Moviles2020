@@ -122,5 +122,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnFinal.setOnClickListener {
+            val intent = Intent(this, WebService::class.java).apply {
+            }
+            startActivity(intent)
+        }
+
     }
 }

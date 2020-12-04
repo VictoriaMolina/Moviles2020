@@ -190,6 +190,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnExtra" />
 
+        <Button
+            android:id="@+id/btnFinal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:text="Final"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFire" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 
