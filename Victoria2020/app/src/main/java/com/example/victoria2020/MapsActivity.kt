@@ -1,6 +1,7 @@
 package com.example.victoria2020
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -8,6 +9,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import kotlinx.android.synthetic.main.activity_detail_put_extra.*
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -20,6 +22,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
     }
     /**
      * Manipulates the map once available.
@@ -34,9 +37,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val mexico = LatLng(19.3911658, -99.4245033)
-        val zoomLevel = 8.0f
-        mMap.addMarker(MarkerOptions().position(mexico).title("México"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mexico, zoomLevel))
+        val latitud = intent.getDoubleExtra("latitud", 28.6711601)
+
+        val longitud = intent.getDoubleExtra("longitud", -106.2050494)
+
+        val direccion = LatLng(latitud, longitud)
+        val zoomLevel = 18.0f
+        mMap.addMarker(MarkerOptions().position(direccion).title("Dirección"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(direccion, zoomLevel))
     }
 }
