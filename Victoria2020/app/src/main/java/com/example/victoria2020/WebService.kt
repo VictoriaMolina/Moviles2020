@@ -3,6 +3,7 @@ package com.example.victoria2020
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
@@ -16,7 +17,7 @@ class WebService : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_service)
-        val url = "https://www.json-generator.com/api/json/get/ceMTwnMhVe?indent=2"
+        val url = "https://www.json-generator.com/api/json/get/cqrxplOVGq?indent=2"
         val queue = Volley.newRequestQueue(this)
         val stringRequest = StringRequest(Request.Method.GET, url, Response.Listener {response ->
             txtRes.text = "La respuesta es ${response}"
@@ -27,8 +28,8 @@ class WebService : AppCompatActivity() {
             txtPaterno.text = identification.apellidoPaterno
             txtMaterno.text = identification.apellidoMaterno
             txtTipo.text = identification.tipoSangre
-            txtLatitud.text = identification.latitud
-            txtLongitud.text = identification.longitud
+            txtLatitud.text =  "${identification.latitud}"
+            txtLongitud.text = "${identification.longitud}"
 
 
         },
@@ -39,6 +40,7 @@ class WebService : AppCompatActivity() {
 
         btnDireccion.setOnClickListener {
             val intent = Intent(this, MapsActivity::class.java)
+            Log.d("Latitud", txtLatitud.text.toString())
             intent.putExtra("latitud", txtLatitud.text.toString())
             intent.putExtra("longitud", txtLongitud.text.toString())
             startActivity(intent)

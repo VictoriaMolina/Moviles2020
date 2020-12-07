@@ -37,11 +37,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val latitud = intent.getDoubleExtra("latitud", 28.6711601)
+        val latitud = intent.getStringExtra("latitud")
 
-        val longitud = intent.getDoubleExtra("longitud", -106.2050494)
+        val longitud = intent.getStringExtra("longitud")
 
-        val direccion = LatLng(latitud, longitud)
+        val direccion = LatLng(latitud!!.toDouble(), longitud!!.toDouble())
         val zoomLevel = 18.0f
         mMap.addMarker(MarkerOptions().position(direccion).title("Dirección"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(direccion, zoomLevel))
